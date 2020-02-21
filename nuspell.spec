@@ -36,7 +36,7 @@ Main features of Nuspell spell checker:
 Summary:	Main library for %{name}
 Group:		System/Libraries
 
-%description -n %{name}
+%description -n %{libname}
 Main library for %{name}.
 
 %package -n %{develname}
