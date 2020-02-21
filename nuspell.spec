@@ -9,6 +9,7 @@ Source0:	https://github.com/nuspell/nuspell/archive/%{name}-%{version}.tar.gz
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	boost-locale-devel
+BuildRequires:	boost-system-devel
 BuildRequires:	pkgconfig(icu-uc)
 
 %description
