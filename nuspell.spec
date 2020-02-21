@@ -14,6 +14,8 @@ BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(icu-uc)
+Requires:	%{libname} = %{EVRD}
+Recommends:	myspell-en
 
 %description
 Nuspell is a free and open source spell checker library and command-line program
@@ -35,6 +37,7 @@ Main features of Nuspell spell checker:
 %package -n %{libname}
 Summary:	Main library for %{name}
 Group:		System/Libraries
+Recommends:	myspell-en
 
 %description -n %{libname}
 Main library for %{name}.
@@ -60,8 +63,17 @@ Development files and headers for %{name}.
 %install
 %ninja_install -C build
 
+%files
+%{_bindir}/%{name}
+
 %files -n %{libname}
 %{_libdir}/lib%{name}.so.%{major}*
 
 %files -n %{develname}
+%doc %{_docdir}/%{name}/README.md
+%dir %{_includedir}/%{name}
+%dir %{_libdir}/cmake/%{name}
+%{_includedir}/%{name}/*.hxx
 %{_libdir}/*.so
+%{_libdir}/pkgconfig/%{name}.pc
+%{_libdir}/cmake/%{name}/*.cmake
