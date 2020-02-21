@@ -10,6 +10,7 @@ BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	boost-locale-devel
 BuildRequires:	boost-system-devel
+BuildRequires:	boost-container-devel
 BuildRequires:	pkgconfig(icu-uc)
 
 %description
