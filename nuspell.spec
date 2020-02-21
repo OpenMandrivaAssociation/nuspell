@@ -13,6 +13,7 @@ BuildRequires:	boost-system-devel
 BuildRequires:	boost-container-devel
 BuildRequires:	boost-core-devel
 BuildRequires:	boost-range-devel
+BuildRequires:	boost-mpl-devel
 BuildRequires:	pkgconfig(icu-uc)
 
 %description
