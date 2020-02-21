@@ -8,7 +8,7 @@ Url:		http://nuspell.github.io/
 Source0:	https://github.com/nuspell/nuspell/archive/%{name}-%{version}.tar.gz
 BuildRequires:	cmake
 BuildRequires:	ninja
-BuildRequires:	boost_locale-devel
+BuildRequires:	boost-locale-devel
 BuildRequires:	pkgconfig(icu-uc)
 
 %description
