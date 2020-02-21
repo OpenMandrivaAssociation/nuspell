@@ -1,3 +1,7 @@
+%define major 3
+%define libname %mklibname %{name} %{major}
+%define develname %mklibname %{name} -d
+
 Summary:	Free and open source C++ spell checking library 
 Name:		nuspell
 Version:	3.0.0
@@ -28,6 +32,21 @@ Main features of Nuspell spell checker:
     pseudoroots and homonyms.
 * Free software. Licensed under GNU LGPL v3 or later.
 
+%package -n %{libname}
+Summary:	Main library for %{name}
+Group:		System/Libraries
+
+%description -n %{name}
+Main library for %{name}.
+
+%package -n %{develname}
+Summary:	Development and header files for %{name}
+Group:		Development/C++
+Requires:	%{libname} >= %{EVRD}
+
+%description -n %{develname}
+Development files and headers for %{name}.
+
 %prep
 %autosetup -p1
 
@@ -39,6 +58,10 @@ Main features of Nuspell spell checker:
 %ninja_build
 
 %install
-%ninja_install
+%ninja_install -C build
 
-%files
+%files -n %{libname}
+%{_libdir}/lib%{name}.so.%{major}*
+
+%files -n %{develname}
+%{_libdir}/*.so
