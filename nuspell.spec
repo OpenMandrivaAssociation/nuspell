@@ -72,6 +72,7 @@ Development files and headers for %{name}.
 %files -n %{develname}
 %doc %{_docdir}/%{name}/README.md
 %dir %{_includedir}/%{name}
+%{_includedir}/nuspell/nuspell_export.h
 %dir %{_libdir}/cmake/%{name}
 %{_includedir}/%{name}/*.hxx
 %{_libdir}/*.so
