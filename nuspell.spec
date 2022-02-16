@@ -4,8 +4,8 @@
 
 Summary:	Free and open source C++ spell checking library 
 Name:		nuspell
-Version:	5.0.1
-Release:	2
+Version:	5.1.0
+Release:	1
 License:	LGPLv3+
 Group:		System/Internationalization
 Url:		http://nuspell.github.io/
