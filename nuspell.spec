@@ -4,11 +4,11 @@
 
 Summary:	Free and open source C++ spell checking library 
 Name:		nuspell
-Version:	5.1.4
+Version:	5.1.6
 Release:	1
 License:	LGPLv3+
 Group:		System/Internationalization
-Url:		http://nuspell.github.io/
+Url:		https://nuspell.github.io/
 Source0:	https://github.com/nuspell/nuspell/archive/%{name}-%{version}.tar.gz
 BuildRequires:	cmake
 BuildRequires:	ninja
@@ -56,6 +56,7 @@ Development files and headers for %{name}.
 %build
 %cmake \
 	-DBUILD_TESTING=OFF \
+ 	-DBUILD_DOCS=OFF \
 	-G Ninja
 
 %ninja_build
